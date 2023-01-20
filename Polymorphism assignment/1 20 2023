@@ -1,0 +1,31 @@
+/**
+ * Matthew Moore MW
+ * Why: Preserve code, and reuse code.
+ * definition - many form
+ */
+public class Polymorphism{
+    public void mammal(){
+        System.out.println("The mammals have mammary glands");
+    }
+}
+class Dog extends Polymorphism{ // The extends keyword, is used to extend the class to the original class
+    public void mammal(){
+        System.out.println("Is a mammal");
+    }
+}
+class Snail extends Polymorphism{
+    public void mammal(){
+        System.out.println("Not a mammal");
+    }
+}
+
+class MainSpecies{
+    public static void main(String[] args){
+        Polymorphism myPolymorphism = new Polymorphism(); //Creates a polymorphism object
+        Polymorphism myDog = new Dog(); //Creates a Dog object
+        Polymorphism mySnail = new Snail(); //Creates a Snail objects
+        myPolymorphism.mammal();
+        myDog.mammal();
+        mySnail.mammal();
+    }
+}
